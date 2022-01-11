@@ -20,9 +20,6 @@ import retrofit2.Response
 import java.util.*
 import org.json.JSONObject
 
-
-
-
 public object Translized {
     private var isInitialized = false
     private val repository: TranslizedRepository = TranslizedRepository()
