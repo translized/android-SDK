@@ -60,7 +60,7 @@ override fun attachBaseContext(newBase: Context?) {
 }
 ```
 
-**Note!** If you don’t have *BaseActivity* class add the following code to all of your activities.
+**Note!** If you don’t have *BaseActivity* class add this code to all of your activities.
 
 ## Callbacks
 
@@ -90,7 +90,7 @@ Support for more attributes/types can be added via custom implementations of `Tr
 
 ## Sample
 
-The `./app` directory contains a sample project. To test the OTA features you need to add your own projectId and otaToken
+The `./app` directory contains a sample project. To test the OTA features you need to add your own projectId and otaToken.
 You can then start replacing the strings found in `res/values/strings.xml` on Translized. New translations will be loaded on app start.
 
 ## Support
