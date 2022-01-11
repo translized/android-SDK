@@ -1,5 +1,6 @@
 package com.translized.translized_ota
 
+import android.os.Build
 import android.util.AttributeSet
 import android.util.SparseArray
 import android.view.View
@@ -22,7 +23,7 @@ public interface Transcriber<T> {
             registerMappings: (put: (id: Int, ((T, CharSequence) -> Unit)) -> Unit) -> Unit
         ): Transcriber<T> {
             val mappings = SparseArray<(T, CharSequence) -> Unit>(5)
-            registerMappings { id, mapping -> mappings[id] = mapping }
+            registerMappings { id, mapping -> mappings.put(id, mapping) }
             return MappingTranscriber(manager, mappings)
         }
     }

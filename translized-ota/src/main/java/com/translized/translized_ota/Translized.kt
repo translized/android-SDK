@@ -18,6 +18,10 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import java.util.*
+import org.json.JSONObject
+
+
+
 
 public object Translized {
     private var isInitialized = false
@@ -65,7 +69,7 @@ public object Translized {
                         }
                     }
                 } else {
-                    clientCallback?.onFailure(TranslizedError(response.message() ?: "Something went wrong."))
+                    clientCallback?.onFailure(TranslizedError(response.errorBody()?.string() ?: "Something went wrong."))
                 }
             }
 
