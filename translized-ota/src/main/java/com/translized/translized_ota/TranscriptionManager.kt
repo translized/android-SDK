@@ -4,13 +4,6 @@ import android.content.res.Resources
 import android.view.View
 import androidx.annotation.StringRes
 
-/**
- * TODO: Add type description!
- *
- * Created by nikolatomovic on 10.1.22..
- * Copyright © 2022 aktiia SA. All rights reserved.
- */
-
 public class TranscriptionManager(
     private val resources: Resources,
     transcriberFactories: List<Transcriber.Factory>

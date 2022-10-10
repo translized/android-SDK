@@ -5,12 +5,6 @@ import org.json.JSONObject
 import java.io.File
 import java.util.*
 
-/**
- * TODO: Add type description!
- *
- * Created by nikolatomovic on 28.12.21..
- * Copyright © 2021 aktiia SA. All rights reserved.
- */
 class TranslizedRepository {
     private var texts: Map<String, String?> = emptyMap()
     private var plurals: Map<String, String> = emptyMap()

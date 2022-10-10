@@ -10,13 +10,6 @@ import retrofit2.Callback
 import retrofit2.Response
 import java.io.*
 
-
-/**
- * TODO: Add type description!
- *
- * Created by nikolatomovic on 6.1.22..
- * Copyright © 2022 aktiia SA. All rights reserved.
- */
 class TranslizedDownloader {
 
     private var filesToDownload = 0

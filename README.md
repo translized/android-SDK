@@ -30,6 +30,11 @@ Add this to your root `build.gradle` at the end of repositories:
        implementation 'com.github.translized:android-SDK:1.0.0'
    }
    ```
+   
+   If you are using ProGuard, add the following rule:
+```
+-keep class com.github.translized.** { *; }
+```
 
 ## Getting started
 

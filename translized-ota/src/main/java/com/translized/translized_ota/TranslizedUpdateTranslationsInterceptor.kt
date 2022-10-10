@@ -4,13 +4,6 @@ import android.view.View
 import io.github.inflationx.viewpump.InflateResult
 import io.github.inflationx.viewpump.Interceptor
 
-/**
- * TODO: Add type description!
- *
- * Created by nikolatomovic on 10.1.22..
- * Copyright © 2022 aktiia SA. All rights reserved.
- */
-
 internal class TranslizedUpdateTranslationsInterceptor(
     private val transcriptionManager: TranscriptionManager
 ) : Interceptor {

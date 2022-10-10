@@ -8,13 +8,6 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.*
 
-/**
- * TODO: Add type description!
- *
- * Created by nikolatomovic on 6.1.22..
- * Copyright © 2022 aktiia SA. All rights reserved.
- */
-
 interface ApiInterface {
 
     @POST("checkOTA")

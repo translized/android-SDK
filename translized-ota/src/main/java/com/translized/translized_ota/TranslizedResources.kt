@@ -2,12 +2,6 @@ package com.translized.translized_ota
 
 import android.content.res.Resources
 
-/**
- * TODO: Add type description!
- *
- * Created by nikolatomovic on 28.12.21..
- * Copyright © 2021 aktiia SA. All rights reserved.
- */
 class TranslizedResources(
     private val repository: TranslizedRepository,
     private val resources: Resources,

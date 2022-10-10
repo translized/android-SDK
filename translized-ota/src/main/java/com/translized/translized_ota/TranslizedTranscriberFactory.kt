@@ -5,13 +5,6 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 
-/**
- * TODO: Add type description!
- *
- * Created by nikolatomovic on 10.1.22..
- * Copyright © 2022 aktiia SA. All rights reserved.
- */
-
 internal class TranslizedTranscriberFactory : Transcriber.Factory {
 
     @Suppress("UNCHECKED_CAST")
