@@ -33,7 +33,7 @@ Add this to your root `build.gradle` at the end of repositories:
    
    If you are using ProGuard, add the following rule:
 ```
--keep class com.github.translized.** { *; }
+-keep class com.translized.translized_ota.** { *; }
 ```
 
 ## Getting started
