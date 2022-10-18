@@ -9,6 +9,7 @@ import android.content.res.Resources
 import com.translized.translized_ota.api.ApiInterface
 import android.content.pm.PackageManager
 import com.translized.translized_ota.local.TranslizedConstants
+import com.translized.translized_ota.local.TranslizedUtils
 import com.translized.translized_ota.model.OtaRelease
 import com.translized.translized_ota.model.OtaResult
 import com.translized.translized_ota.model.RequestCheckOta
@@ -18,7 +19,6 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import java.util.*
-import org.json.JSONObject
 
 public object Translized {
     private var isInitialized = false
@@ -64,6 +64,9 @@ public object Translized {
                         if (it.objectId == null) {
                             clientCallback?.onUpdateNotNeeded()
                         }
+                        val editor = sharedPrefs.edit()
+                        editor.putString(TranslizedConstants.LAST_CHECK_DATE.value, TranslizedUtils.getISO8601StringForCurrentDate())
+                        editor.apply()
                     }
                 } else {
                     clientCallback?.onFailure(TranslizedError(response.errorBody()?.string() ?: "Something went wrong."))
@@ -122,6 +125,7 @@ public object Translized {
         }
 
         val currentOtaId = sharedPrefs.getString(TranslizedConstants.OTA_ID.value, "") ?: ""
+        val lastCheckDate = sharedPrefs.getString(TranslizedConstants.LAST_CHECK_DATE.value, "") ?: ""
 
         val currentUserId = sharedPrefs.getString(TranslizedConstants.USER_ID.value, null)
         val userId = currentUserId ?: UUID.randomUUID().toString()
@@ -136,7 +140,8 @@ public object Translized {
             versionName,
             currentOtaId,
             userId,
-            "android"
+            "android",
+            lastCheckDate
         )
     }
 

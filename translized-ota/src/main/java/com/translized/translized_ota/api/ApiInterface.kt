@@ -18,7 +18,7 @@ interface ApiInterface {
 
     companion object {
 
-        var BASE_URL = "https://translized.eu-4.evennode.com/"
+        var BASE_URL = "https://api.translized.com/"
 
         fun create() : ApiInterface {
 
