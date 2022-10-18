@@ -64,10 +64,10 @@ public object Translized {
                         if (it.objectId == null) {
                             clientCallback?.onUpdateNotNeeded()
                         }
-                        val editor = sharedPrefs.edit()
-                        editor.putString(TranslizedConstants.LAST_CHECK_DATE.value, TranslizedUtils.getISO8601StringForCurrentDate())
-                        editor.apply()
                     }
+                    val editor = sharedPrefs.edit()
+                    editor.putString(TranslizedConstants.LAST_CHECK_DATE.value, TranslizedUtils.getISO8601StringForCurrentDate())
+                    editor.apply()
                 } else {
                     clientCallback?.onFailure(TranslizedError(response.errorBody()?.string() ?: "Something went wrong."))
                 }
