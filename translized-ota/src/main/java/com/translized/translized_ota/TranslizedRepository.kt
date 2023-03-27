@@ -13,8 +13,11 @@ class TranslizedRepository {
     fun getPlural(id: String): String? = plurals[id]
 
     fun loadTranslations(context: Context) {
-        val languageCode = Locale.getDefault().language
-        val filePath = context.filesDir.absolutePath  + "/translized_$languageCode.json"
-        texts = JSONObject(File(filePath).readText()).toMap()
+        try {
+            val languageCode = Locale.getDefault().language
+            val filePath = context.filesDir.absolutePath  + "/translized_$languageCode.json"
+            texts = JSONObject(File(filePath).readText()).toMap()
+        } catch (_: java.lang.Exception) {
+        }
     }
 }

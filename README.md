@@ -27,7 +27,7 @@ Add this to your root `build.gradle` at the end of repositories:
 
    ```groovy
    dependencies {
-       implementation 'com.github.translized:android-SDK:1.0.2'
+       implementation 'com.github.translized:android-SDK:1.0.3'
    }
    ```
    
